@@ -20,4 +20,73 @@ const Account = () => {
       ),
     }),
   });
+
+  return (
+    <div style={{ marginTop: "-10%", background: "white" }}>
+      <Header
+        className="site-layout-background"
+        style={{ fontSize: "20px", marginBottom: "2%" }}
+      >
+        <p>
+          <b>Account</b>
+          Manager
+        </p>
+      </Header>
+      <Row gutter={16}>
+        <Col span={12}>
+          <Card>
+            <Statistic title="Current Credits (Lim)" value={3} />
+          </Card>
+        </Col>
+        <Col span={12}>
+          <Card>
+            <Form
+              wrapperCol={{
+                span: 30,
+              }}
+              align="center"
+              layout="vertical"
+              onFinish={formik.handleSubmit}
+            >
+              <div style={{ backGround: "White" }}>
+                <Form.Item
+                  style={{ textAlign: "center" }}
+                  label="Update Password"
+                >
+                  <Input.Password
+                    id="password"
+                    value={formik.password}
+                    placeholder="Password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    iconRender={(visible) =>
+                      visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
+                    }
+                  />
+                </Form.Item>
+                <Form.Item label="Confirm Password">
+                  <Input.Password
+                    id="passtwo"
+                    value={formik.passtwo}
+                    placeholder="Re-Type Password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    iconRender={(visible) =>
+                      visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
+                    }
+                  />
+                  <br />
+                  <br />
+                  <Button type="primary" htmlType="submit">
+                    Update Password
+                  </Button>
+                </Form.Item>
+              </div>
+            </Form>
+          </Card>
+        </Col>
+      </Row>
+    </div>
+  );
 }
+export default Account;
