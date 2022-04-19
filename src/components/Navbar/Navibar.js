@@ -1,5 +1,8 @@
 import React, { useState,Fragment } from 'react';
 import ReactDOM from 'react-dom'
+import { useSelector } from "react-redux";
+import SignInLogin from "./SignInLogin";
+import LoggedIn from "./LoggedIn";
 import { Layout, Menu, Breadcrumb, PageHeader } from 'antd';
 import HomePage from "../../pages/disconnected/HomePage";
 import { BrowserRouter as Router, Link } from "react-router-dom";
@@ -9,8 +12,11 @@ import './Navibar.css';
 
 const Navibar = (props) => {
 
-  const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const navStatus = useSelector((state) => state.navbar.navType);
+const { SubMenu } = Menu;
+const { Header, Sider, Footer } = Layout;
+console.log(navStatus);
+
     return(
       <Layout>
         <Header>
@@ -19,14 +25,6 @@ const { Header, Content, Sider } = Layout;
           <Menu.Item key="2">Login  <Link to="/Login" /> </Menu.Item>
           </Menu>
         </Header>
-      {/*<Header className="header">
-        <div className="logo" />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-          <Menu.Item key="1">nav 1</Menu.Item>
-          <Menu.Item key="2">nav 2</Menu.Item>
-          <Menu.Item key="3">nav 3</Menu.Item>
-        </Menu>
-      </Header> */}
       <Layout>
         <Sider width={200} className="site-layout-background">
           <Menu
@@ -35,16 +33,9 @@ const { Header, Content, Sider } = Layout;
             defaultOpenKeys={['sub1']}
             style={{ height: '100%', borderRight: 0 }}
           >
+            {navStatus === "login" ? <SignInLogin /> : <LoggedIn />}
             <SubMenu key="sub1" icon={<UserOutlined />} title="Profile">
-              <Menu.Item key="1">Account Information  <Link to="/" /> </Menu.Item>
-            </SubMenu>
-            <SubMenu key="sub2" icon={<LaptopOutlined />} title="Friends">
-              <Menu.Item key="2">Friends List</Menu.Item>
-              <Menu.Item key="3">Find Friends</Menu.Item>
-            </SubMenu>
-            <SubMenu key="sub3" icon={<NotificationOutlined />} title="Communities">
-              <Menu.Item key="4">Subscriptions</Menu.Item>
-              <Menu.Item key="5">Explore</Menu.Item>
+              <Menu.Item key="1">Acount Creation  <Link to="/" /> </Menu.Item>
             </SubMenu>
             <SubMenu key="sub4" icon={<BookOutlined />} title="Documentation">
               <Menu.Item key="6">What is Mevo? <Link to="/docsMevo" /> </Menu.Item>
