@@ -1,5 +1,5 @@
 import FullLayOut from "../../components/Base/FullLayOut";
-import ConnectedResult from "../../components/Results/ConnectedResult";
+import ConnectedResult from "../../components/Results/ConnectedResults";
 import { Modal, Button } from "antd";
 import { useEffect, useState } from "react";
 import MainStats from "../../components/Stats/MainStats";

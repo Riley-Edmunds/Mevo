@@ -1,5 +1,5 @@
 import LayOut from "../../components/Base/LayOut";
-import SignoutResult from "../../components/Results/SignoutResult";
+import SignoutResult from "../../components/Results/SignoutResults";
 const SignOut = () => {
   return (
     <LayOut>
