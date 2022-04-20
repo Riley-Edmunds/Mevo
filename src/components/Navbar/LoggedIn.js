@@ -32,21 +32,24 @@ import {
           style={{ height: '100%', borderRight: 0 }}
         >
           <SubMenu key="sub1" icon={<UserOutlined />} title="Profile">
-            <Menu.Item key="1">Account Information  <Link to="/" /> </Menu.Item>
+            <Menu.Item key="1">Account Information  <Link to="/account" /> </Menu.Item>
           </SubMenu>
-          <SubMenu key="sub2" icon={<LaptopOutlined />} title="Friends">
-            <Menu.Item key="2">Friends List</Menu.Item>
-            <Menu.Item key="3">Find Friends</Menu.Item>
+          <SubMenu key="sub2" icon={<ExperimentOutlined />} title="Feed">
+            <Menu.Item key="2">Explore Posts <Link to="/feed" /> </Menu.Item>
           </SubMenu>
-          <SubMenu key="sub3" icon={<NotificationOutlined />} title="Communities">
-            <Menu.Item key="4">Subscriptions</Menu.Item>
-            <Menu.Item key="5">Explore</Menu.Item>
+          <SubMenu key="sub3" icon={<LaptopOutlined />} title="Friends">
+            <Menu.Item key="3">Friends List <Link to="/working" /> </Menu.Item>
+            <Menu.Item key="4">Find Friends <Link to="/working" /> </Menu.Item>
           </SubMenu>
-          <SubMenu key="sub4" icon={<BookOutlined />} title="Documentation">
-            <Menu.Item key="6">What is Mevo? <Link to="/docsMevo" /> </Menu.Item>
-            <Menu.Item key="7">How our Application Works <Link to="/docsApplication" /> </Menu.Item>
-            <Menu.Item key="8">Why Blockchains? <Link to="/docsBlockchains" /> </Menu.Item>
-            <Menu.Item key="9">Future Functions <Link to="/docsFuture" /> </Menu.Item>
+          <SubMenu key="sub4" icon={<NotificationOutlined />} title="Communities">
+            <Menu.Item key="5">Subscriptions <Link to="/working" /> </Menu.Item>
+            <Menu.Item key="6">Explore <Link to="/working" /> </Menu.Item>
+          </SubMenu>
+          <SubMenu key="sub5" icon={<BookOutlined />} title="Documentation">
+            <Menu.Item key="7">What is Mevo? <Link to="/docsMevo" /> </Menu.Item>
+            <Menu.Item key="8">How our Application Works <Link to="/docsApplication" /> </Menu.Item>
+            <Menu.Item key="9">Why Blockchains? <Link to="/docsBlockchains" /> </Menu.Item>
+            <Menu.Item key="10">Future Functions <Link to="/docsFuture" /> </Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>

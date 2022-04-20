@@ -21,7 +21,7 @@ console.log(navStatus);
       <Layout>
         <Header>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-          <Menu.Item key="1">Mevo  <Link to="/" /> </Menu.Item>
+          <Menu.Item key="1">Mevo  <Link to="/Feed" /> </Menu.Item>
           <Menu.Item key="2">Login  <Link to="/Login" /> </Menu.Item>
           </Menu>
         </Header>
@@ -34,15 +34,6 @@ console.log(navStatus);
             style={{ height: '100%', borderRight: 0 }}
           >
             {navStatus === "login" ? <SignInLogin /> : <LoggedIn />}
-            <SubMenu key="sub1" icon={<UserOutlined />} title="Profile">
-              <Menu.Item key="1">Acount Creation  <Link to="/" /> </Menu.Item>
-            </SubMenu>
-            <SubMenu key="sub4" icon={<BookOutlined />} title="Documentation">
-              <Menu.Item key="6">What is Mevo? <Link to="/docsMevo" /> </Menu.Item>
-              <Menu.Item key="7">How our Application Works <Link to="/docsApplication" /> </Menu.Item>
-              <Menu.Item key="8">Why Blockchains? <Link to="/docsBlockchains" /> </Menu.Item>
-              <Menu.Item key="9">Future Functions <Link to="/docsFuture" /> </Menu.Item>
-            </SubMenu>
           </Menu>
         </Sider>
         <Layout style={{ padding: '10vw 2vw 2vw' }}>
