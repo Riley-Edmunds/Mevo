@@ -46,7 +46,7 @@ import {
     const dispatch = useDispatch();
     const commentList = [...messages].reverse().map((message) => {
       return (
-        <div style={{ textAlign: "left" }}>
+        <div style={{ textAlign: "left", marginLeft: "4.5%"}}>
           <Comment
             author={<p>@{message.author}</p>}
             content={<p>{message.text}</p>}
@@ -74,7 +74,7 @@ import {
           {commentList}
         </div>
         <Form onFinish={formik.handleSubmit}>
-          <Form.Item>
+          <Form.Item style={{ marginLeft: "4.5%", marginRight:"4.5%" }}> 
             <Input.TextArea
               id="message"
               placeholder="Message"
@@ -86,13 +86,13 @@ import {
             />
           </Form.Item>
           <Form.Item>
-            <span style={{ color: "lightgray" }}>
+            <span style={{ color: "lightgray", marginLeft: "4.5%" }}>
               {" "}
               Current Credits: {credits}
             </span>
             <br />
             <br />
-            <Button type="primary" htmlType="submit" help="Current Credits: 3">
+            <Button style={{ marginLeft: "4.5%" }} type="primary" htmlType="submit" help="Current Credits: 3">
               Expend Credit (-1)
             </Button>
           </Form.Item>

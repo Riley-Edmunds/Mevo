@@ -5,6 +5,7 @@ import HomePage from "../../pages/disconnected/HomePage";
 import Mevo from "../../pages/connected/Docs/Mevo";
 import Account from "../../pages/connected/Account";
 import Connected from "../../pages/connected/Connected";
+import Working from "../../pages/connected/Working";
 import Feed from "../../pages/connected/Feed";
 import Blockchains from "../../pages/connected/Docs/Blockchains";
 import Application from "../../pages/connected/Docs/Application";
@@ -18,6 +19,7 @@ const Limbo = () => {
       <Navibar>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/working" element={<Working />} />
         <Route path="/account" element={<Account />} />
         <Route path="/connected" element={<Connected />} />
         <Route path="/login" element={<Login />} />

@@ -22,12 +22,12 @@ const Account = () => {
   });
 
   return (
-    <div style={{ marginTop: "-10%", background: "white" }}>
+    <div style={{ color: "white", marginTop: "-10%", background: "white" }}>
       <Header
         className="site-layout-background"
         style={{ fontSize: "20px", marginBottom: "2%" }}
       >
-        <p>
+        <p style={{ color: "white" }}>
           <b>Account</b>
           Manager
         </p>
@@ -88,5 +88,5 @@ const Account = () => {
       </Row>
     </div>
   );
-}
+};
 export default Account;

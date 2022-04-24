@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Form, Input, Button } from "antd";
@@ -16,13 +16,14 @@ const LoginForm = () => {
     initialValues: {
       username: "",
       password: "",
-      api:""
+      api: "",
     },
     onSubmit: (value) => {
       navigate("/connected");
-      dispatch(navBarActions.setAPI(value.api))
-      dispatch(navBarActions.setUserName(value.username))
+      dispatch(navBarActions.setAPI(value.api));
+      dispatch(navBarActions.setUserName(value.username));
       dispatch(navBarActions.changeNav("loggedin"));
+      dispatch(navBarActions.populate());
     },
     validationSchema: Yup.object({
       username: Yup.string().required(),
@@ -47,7 +48,7 @@ const LoginForm = () => {
         layout="vertical"
         onFinish={formik.handleSubmit}
       >
-        <div style={{ backGround: "White" }}>
+        <div style={{ backGround: "White", marginLeft: "13%" }}>
           <Form.Item
             style={{ textAlign: "center" }}
             label="Username"

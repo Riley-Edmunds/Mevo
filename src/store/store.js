@@ -20,6 +20,18 @@ const navbar = createSlice({
     messages: [],
   },
   reducers: {
+    // setMessages(state, action) {
+    //   state.messages = action.payload;
+    // },
+    populate(state) {
+      const post = async () => {
+        const response2 = await fetch(`${state.api}messages.json`);
+        const data2 = await response2.json();
+        state.messages = data2;
+        console.log(state.messages);
+      };
+      post();
+    },
     addMessage(state, action) {
       state.messages = [...state.messages, action.payload];
     },

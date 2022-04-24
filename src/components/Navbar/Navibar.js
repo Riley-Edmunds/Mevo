@@ -21,8 +21,8 @@ console.log(navStatus);
       <Layout>
         <Header>
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-          <Menu.Item key="1">Mevo  <Link to="/Feed" /> </Menu.Item>
-          <Menu.Item key="2">Login  <Link to="/Login" /> </Menu.Item>
+          <Menu.Item key="1">Mevo  <Link to="/feed" /> </Menu.Item>
+          <Menu.Item key="2">{navStatus === "login" ? "Login" :"Signout" }{navStatus === "login" ? <Link to="/login" />:<Link to="/signout" /> } </Menu.Item>
           </Menu>
         </Header>
       <Layout>

@@ -3,7 +3,7 @@ const Working = () => {
   return (
     <div>
         <h1> 
-            Comming Soon!
+            Coming Soon!
         </h1>
     </div>
   );

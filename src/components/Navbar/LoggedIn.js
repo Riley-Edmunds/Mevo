@@ -32,7 +32,7 @@ import {
           style={{ height: '100%', borderRight: 0 }}
         >
           <SubMenu key="sub1" icon={<UserOutlined />} title="Profile">
-            <Menu.Item key="1">Account Information  <Link to="/account" /> </Menu.Item>
+            <Menu.Item key="1">Account Manager  <Link to="/account" /> </Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<ExperimentOutlined />} title="Feed">
             <Menu.Item key="2">Explore Posts <Link to="/feed" /> </Menu.Item>
