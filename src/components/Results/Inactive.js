@@ -13,10 +13,10 @@ const Inactive = () => {
             "Lets change that, Login or Sign Up to Connect Node."
             <br />
             <br />
-            <a href="images/limboMAC.zip"> DOWNLOAD LIMBO MINER FOR MAC OS.</a>
+            <a href="https://mega.nz/file/yktmkQJK#RaLgg9GkYy6Ci2SA-hOFbUzUnGtAYdcNx9wwzo0YExw"> DOWNLOAD LIMBO MINER FOR MAC OS DEVICES.</a>
             <br />
-            <a href="images/limbo-win32-ia32.zip">
-              DOWNLOAD LIMBO MINER FOR WINDOWS.
+            <a href="https://mega.nz/file/2k81VZSL#7Cb5ew68-iUWYhjoEBgtqFvHbQYkijTP5v6SGOQ_sGc">
+              DOWNLOAD LIMBO MINER FOR WINDOWS DEVICES.
             </a>
           </div>
         }
