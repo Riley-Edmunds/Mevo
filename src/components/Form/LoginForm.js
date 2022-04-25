@@ -19,7 +19,7 @@ const LoginForm = () => {
       api: "",
     },
     onSubmit: (value) => {
-      navigate("/connected");
+      navigate("/feed");
       dispatch(navBarActions.setAPI(value.api));
       dispatch(navBarActions.setUserName(value.username));
       dispatch(navBarActions.changeNav("loggedin"));

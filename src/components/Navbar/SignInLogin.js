@@ -17,14 +17,12 @@ const SignInLogin = (props) => {
             defaultOpenKeys={['sub1']}
             style={{ height: '100%', borderRight: 0 }}
           >
-            <SubMenu key="sub2" icon={<UserOutlined />} title="Account Creation">
-              <Menu.Item key="2">Making an Account  <Link to="/" /> </Menu.Item>
-            </SubMenu>
             <SubMenu key="sub4" icon={<BookOutlined />} title="Documentation">
               <Menu.Item key="5">What is Mevo? <Link to="/docsMevo" /> </Menu.Item>
               <Menu.Item key="6">How our Application Works <Link to="/docsApplication" /> </Menu.Item>
               <Menu.Item key="7">Why Blockchains? <Link to="/docsBlockchains" /> </Menu.Item>
               <Menu.Item key="8">Future Functions <Link to="/docsFuture" /> </Menu.Item>
+              <Menu.Item key="9">Firebase Tutorial <Link to="/docsTutorial" /> </Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>

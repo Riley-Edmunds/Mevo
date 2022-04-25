@@ -1,11 +1,12 @@
 import LayOut from "../../components/Base/LayOut";
+import { Card } from "antd";
 const Working = () => {
   return (
-    <div>
-        <h1> 
-            Coming Soon!
-        </h1>
-    </div>
+    <LayOut>
+        <Card style={{ width: 300 }}>
+          <h1>Coming Soon!</h1>
+        </Card>
+    </LayOut>
   );
 };
 

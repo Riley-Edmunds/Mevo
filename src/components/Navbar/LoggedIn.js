@@ -38,8 +38,8 @@ import {
             <Menu.Item key="2">Explore Posts <Link to="/feed" /> </Menu.Item>
           </SubMenu>
           <SubMenu key="sub3" icon={<LaptopOutlined />} title="Friends">
-            <Menu.Item key="3">Friends List <Link to="/working" /> </Menu.Item>
-            <Menu.Item key="4">Find Friends <Link to="/working" /> </Menu.Item>
+            <Menu.Item key="3">Friends List <Link to="/friends" /> </Menu.Item>
+            <Menu.Item key="4">Find Friends <Link to="/findFriends" /> </Menu.Item>
           </SubMenu>
           <SubMenu key="sub4" icon={<NotificationOutlined />} title="Communities">
             <Menu.Item key="5">Subscriptions <Link to="/working" /> </Menu.Item>
@@ -50,6 +50,7 @@ import {
             <Menu.Item key="8">How our Application Works <Link to="/docsApplication" /> </Menu.Item>
             <Menu.Item key="9">Why Blockchains? <Link to="/docsBlockchains" /> </Menu.Item>
             <Menu.Item key="10">Future Functions <Link to="/docsFuture" /> </Menu.Item>
+            <Menu.Item key="11">Firebase Tutorial <Link to="/docsTutorial" /> </Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>

@@ -11,8 +11,31 @@ const hashSlice = createSlice({
     blockList: [],
     miningStatus: "Standby",
     hashRate: { status: "", rate: 10 },
+    friends: [
+      { username: "noah", color: "purple", id: 1 },
+      { username: "riley", color: "green", id: 2 },
+      { username: "trevor", color: "yellow", id: 3 },
+      { username: "quinnpatterson", color: "red", id: 4 },
+      { username: "elijah", color: "orange", id: 5 },
+      { username: "xia", color: "blue", id: 6 },
+    ],
+    users: [
+      { username: "anewuser", color: "purple", id: 1 },
+      { username: "boopBeep", color: "green", id: 2 },
+      { username: "foobar", color: "yellow", id: 3 },
+      { username: "coffee", color: "red", id: 4 },
+      { username: "presentation", color: "orange", id: 5 },
+      { username: "riley2", color: "blue", id: 6 },
+    ],
   },
   reducers: {
+    deleteFriend(state, action) {
+      state.friends = state.friends.filter((friend) => {
+        return friend.id !== action.payload;
+      });
+      console.log(state.friends);
+      console.log(action.payload);
+    },
     setHashValue(state, action) {
       state.hashValue = action.payload;
     },
